@@ -9,7 +9,7 @@ interface CallToActionProps {
 
 const CallToAction: React.FC<CallToActionProps> = ({ onNavigate, onConnect, isWalletConnected }) => {
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-r from-slate-900 via-gray-900 to-slate-800 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -17,11 +17,14 @@ const CallToAction: React.FC<CallToActionProps> = ({ onNavigate, onConnect, isWa
         }}></div>
       </div>
 
+      {/* Glass overlay */}
+      <div className="absolute inset-0 glass-effect"></div>
+
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
           Ready to Start Investing?
         </h2>
-        <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
           Join the future of real estate investment. Connect your wallet to explore tokenized properties 
           or complete KYC verification to start investing today.
         </p>
@@ -31,13 +34,13 @@ const CallToAction: React.FC<CallToActionProps> = ({ onNavigate, onConnect, isWa
             <>
               <button
                 onClick={() => onNavigate('estates')}
-                className="group bg-white text-blue-600 hover:bg-gray-50 font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg"
+                className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg"
               >
                 <Building2 className="w-6 h-6" />
                 <span>Browse Estates</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="group bg-transparent border-3 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-10 py-5 rounded-2xl transition-all duration-300 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg">
+              <button className="group glass-button border-2 border-white/30 text-white hover:border-white/50 font-bold px-10 py-5 rounded-2xl transition-all duration-300 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg">
                 <Shield className="w-6 h-6" />
                 <span>Start KYC Process</span>
               </button>
@@ -46,13 +49,13 @@ const CallToAction: React.FC<CallToActionProps> = ({ onNavigate, onConnect, isWa
             <>
               <button
                 onClick={onConnect}
-                className="group bg-white text-blue-600 hover:bg-gray-50 font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg"
+                className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg"
               >
                 <Wallet className="w-6 h-6" />
                 <span>Connect Wallet</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="group bg-transparent border-3 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-10 py-5 rounded-2xl transition-all duration-300 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg">
+              <button className="group glass-button border-2 border-white/30 text-white hover:border-white/50 font-bold px-10 py-5 rounded-2xl transition-all duration-300 hover:shadow-2xl flex items-center justify-center space-x-3 text-lg">
                 <Shield className="w-6 h-6" />
                 <span>Learn More</span>
               </button>
