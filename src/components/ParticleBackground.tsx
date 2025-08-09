@@ -29,7 +29,6 @@ const ParticleBackground: React.FC = () => {
     }> = [];
 
     const colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#06b6d4'];
-    const colors = ['#06b6d4', '#3b82f6', '#1e40af', '#0ea5e9'];
 
     // Create particles
     for (let i = 0; i < 50; i++) {
